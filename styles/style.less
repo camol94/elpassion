@@ -21,29 +21,11 @@ body {
   font-size: 13px;
   font-family: "Open sans", serif;
 }
-.icons {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 6px;
 
-}
-.icon-close {
-  background: #FF584F;
-}
-.icon-minimize {
-  background: #FEBC1B;
-}
-.icon-maximize {
-  background: #01CD46;
-}
 .application {
-  margin: 10px auto;
+  margin: 80px auto;
   width: 650px;
   height: 450px;
-
-
 }
 // left-side
 aside {
@@ -57,6 +39,23 @@ border-top-left-radius: @app-radius;
   height: 40px;
   padding: 12px;
   box-sizing: border-box;
+  .icons {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 6px;
+    cursor: pointer;
+  }
+  .icon-close {
+    background: #FF584F;
+  }
+  .icon-minimize {
+    background: #FEBC1B;
+  }
+  .icon-maximize {
+    background: #01CD46;
+  }
 }
 // navigation
 nav {
@@ -65,12 +64,14 @@ nav {
   height: 410px;
   border-bottom-left-radius: @app-radius;
   li {
-
     cursor: pointer;
   }
   a {
+    position: relative;
+    display: flex;
+    align-items: center;
         color: white;
-    display: block;
+
     padding: 15px 12px;
   }
   .active, li:hover {
@@ -80,8 +81,12 @@ nav {
     margin-right: 10px;
   }
   span {
-    float: right;
+text-align: center;
     color: #787C88;
+    position: absolute;
+    right: 15px;
+    bottom: 50%;
+    transform: translateY(50%);
   }
 }
 // main-side
@@ -112,7 +117,7 @@ main {
     margin: 5px 0;
 
   }
-  img {
+  .star {
     display: none;
   }
   .important {

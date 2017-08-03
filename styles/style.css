@@ -19,24 +19,8 @@ body {
   font-size: 13px;
   font-family: "Open sans", serif;
 }
-.icons {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 6px;
-}
-.icon-close {
-  background: #FF584F;
-}
-.icon-minimize {
-  background: #FEBC1B;
-}
-.icon-maximize {
-  background: #01CD46;
-}
 .application {
-  margin: 10px auto;
+  margin: 80px auto;
   width: 650px;
   height: 450px;
 }
@@ -52,6 +36,23 @@ header {
   padding: 12px;
   box-sizing: border-box;
 }
+header .icons {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
+  cursor: pointer;
+}
+header .icon-close {
+  background: #FF584F;
+}
+header .icon-minimize {
+  background: #FEBC1B;
+}
+header .icon-maximize {
+  background: #01CD46;
+}
 nav {
   background: rgba(17, 16, 34, 0.9);
   max-height: 100%;
@@ -62,8 +63,10 @@ nav li {
   cursor: pointer;
 }
 nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
   color: white;
-  display: block;
   padding: 15px 12px;
 }
 nav .active,
@@ -74,8 +77,12 @@ nav img {
   margin-right: 10px;
 }
 nav span {
-  float: right;
+  text-align: center;
   color: #787C88;
+  position: absolute;
+  right: 15px;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 main {
   background: #fff;
@@ -104,7 +111,7 @@ main li {
   justify-content: space-between;
   margin: 5px 0;
 }
-main img {
+main .star {
   display: none;
 }
 main .important {
